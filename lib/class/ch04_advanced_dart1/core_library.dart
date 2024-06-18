@@ -6,7 +6,8 @@ main() {
   // print(stringBuffer.toString());
 
   final findNumberRegExp = RegExp(r'\d+');
-  const exampleUriPath = '?param1=good&param2=33&param3=22.4&color[]=red&color[]=blue&color[]=3';
+  const exampleUriPath =
+      '?param1=good&param2=33&param3=22.4&color[]=red&color[]=blue&color[]=3';
 
   // final matches = findNumberRegExp.allMatches(exampleUriPath);
   // for (final match in matches) {
@@ -25,15 +26,8 @@ main() {
 
   final uri = Uri.parse(exampleUriPath);
 
-  print(uri.scheme);
-  print(uri.host);
-  print(uri.path);
-
-  for (final pathSegment in uri.pathSegments) {
-    print(pathSegment);
-  }
+  for (final pathSegment in uri.pathSegments) {}
 
   final params = uri.queryParametersAll;
   final param4 = params['color[]'];
-  print(param4);
 }
